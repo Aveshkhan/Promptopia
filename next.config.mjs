@@ -1,15 +1,22 @@
-/** @type {import('next').NextConfig} */
+// /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-        domains: ['lh3.googleusercontent.com'],
+        remotePatterns: [
+            {
+              protocol: 'https',
+              hostname: 'lh3.googleusercontent.com',
+              pathname: '**',
+            },
+        ],
+        // domains: ['lh3.googleusercontent.com'],
     },
-    webpack(config) {
-        config.experiments = {
-          ...config.experiments,
-          topLevelAwait: true,
-        }
-        return config
-      }
+    // webpack(config) {
+    //     config.experiments = {
+    //       ...config.experiments,
+    //       topLevelAwait: true,
+    //     }
+    //     return config
+    //   }
 };
 
 export default nextConfig;
