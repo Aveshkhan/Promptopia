@@ -3,12 +3,15 @@ const nextConfig = {
     images: {
         remotePatterns: [
             {
-              protocol: 'https',
-              hostname: 'lh3.googleusercontent.com',
-              pathname: '**',
+                protocol: 'https',
+                hostname: 'lh3.googleusercontent.com',
+                pathname: '**',
             },
         ],
         // domains: ['lh3.googleusercontent.com'],
+    },
+    experimental: {
+        missingSuspenseWithCSRBailout: false,
     },
     // webpack(config) {
     //     config.experiments = {
